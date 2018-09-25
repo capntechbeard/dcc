@@ -1,0 +1,83 @@
+DCC
+
+Views
+
+Splash
+
+Concept Selection
+  >Character
+    Ability Scores (6) [Starts at 1]
+      Strength
+      Agility
+      Endurance
+      Knowledge
+      Wisdom
+      Charisma
+
+      50 points to spend
+      Stat Value	       2,3     	4, 5, 6, 7	      8	   9	   10
+      Cost to Increase	 1p	        2p	              3p	 4p	   5p
+
+      Preset Choices (List of options)
+        Distribute between 6 Scores
+
+    Personality
+      5 Choices displayed
+        0=====0=====0=====0=====0
+        [      ~~~~~~~~~~       ]
+        Bottom panel shows current selection description
+
+    Character Traits
+      Start at 0, Max or Min 15 / -15.
+      Positive traits add, Negative subtract
+        MUST equal 0 at end
+
+      Basic Skill Template
+      -2   -1   0    1   2
+      -10  -5   0   +5  +10
+
+        Combat
+        Spirit
+        Arcane
+
+        Body
+        Personality
+        *Natural Skill
+
+            C--S--A  B--P  N
+   [Current Choices][Trait Description]
+            [  Tab Options  ]
+  Cowardice 0===0===0===0===0 Strong Willed
+           -g  -l   x   l   g
+
+        Profession Traits add discount
+
+    Profession
+      Warriors
+      Spiritualists
+      Arcanists
+      Jacks
+
+      Display Health Change
+      Display Magic Change
+
+    Race
+
+
+      List of Races - Multiple Choice
+        +Kindered choices
+
+    Profession & General Skills - *changes value based on profession & trait
+      Armor Proficiency* - Various weird values
+      ----- All Profession skills start at 3 - Increase 1 per rank
+      Combat* -
+      Arcane*
+      Spirit*
+
+      30 points to spend
+
+    Starting Equipment
+      Shop
+
+  >Spell
+  >Item
