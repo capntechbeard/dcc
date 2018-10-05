@@ -1,0 +1,13 @@
+.button {
+    font-weight: 900;
+}
+
+.next-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    &:disabled{
+        background-color: rgba(211, 51, 51, 0.753);
+    }
+}

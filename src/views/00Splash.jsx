@@ -1,16 +1,21 @@
 import React, { Component, Fragment } from 'react';
-import Button from '../components/Button.jsx'
-import Container from '../components/Container.jsx'
-import Header from '../components/Header.jsx'
+import Button from '../components/Button/Button'
+import Container from '../components/Container/Container'
+import Header from '../components/Header/Header'
 
 class Splash extends Component {
   render() {
     return (
       <Fragment>
-        <Container title="it's anything else he said" />
-        <Button title="You can't click me yet" />
-        <Header title="I am also a title thingy" />
+        <Container title="it's anything else he said">
+          <Header title="HEADER!" />
+          <Button 
+            className="next-button"
+            isDisabled
+            text="NEXT" />
+        </Container>
       </Fragment>
+        
     );
   }
 }

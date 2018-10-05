@@ -1,10 +1,11 @@
 import React from 'react';
+import './Container.scss';
 
 const Container = props => {
-  const { title } = props
+  const { children } = props
   return (
     <div className="container">
-      Homestarrunner.net { title }
+      { children }
     </div>
   )
 }
