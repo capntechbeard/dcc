@@ -6,14 +6,15 @@ const getButtonClasses = (customClass) => {
 }
 
 const Button = props => {
-  const { className, isDisabled, text } = props;
+  const { className, isDisabled, onClick, text } = props;
 
 const classes = getButtonClasses(className)
 
   return (
     <button
       className={ classes }
-      disabled={isDisabled}>
+      disabled={isDisabled}
+      onClick={onClick}>
       { text }
     </button>
 

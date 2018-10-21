@@ -8,7 +8,7 @@ class ACharacterCreateMenu extends Component {
     return (
       <Fragment>
         <Container title="Container Title">
-          <Header title="Header" />
+          <Header title="Header A00" />
           <Button 
             className="next-button"
             isDisabled

@@ -4,6 +4,19 @@ import Container from '../components/Container/Container'
 import Header from '../components/Header/Header'
 
 class Splash extends Component {
+
+  constructor(props) {
+    super(props)
+
+    this.handleNavigation = this.handleNavigation.bind(this)
+  }
+
+  handleNavigation() {
+    console.log ('test')
+    const {navigateToPage} = this.props
+    navigateToPage ('ACharacterCreateMenu')
+  }
+
   render() {
     return (
       <Fragment>
@@ -11,7 +24,7 @@ class Splash extends Component {
           <Header title="HEADER!" />
           <Button 
             className="next-button"
-            isDisabled
+            onClick={this.handleNavigation}
             text="NEXT" />
         </Container>
       </Fragment>

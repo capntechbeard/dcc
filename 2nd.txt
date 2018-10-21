@@ -1,0 +1,5 @@
+update VIEWS to work with (bind)
+
+update titles of pages
+
+back buttons?
