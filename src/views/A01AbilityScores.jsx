@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import Button from '../components/Button/Button'
 import Container from '../components/Container/Container'
+import Distributor from '../components/Distributor/Distributor'
 import Header from '../components/Header/Header'
+
 
 class AAbilityScores extends Component {
 
@@ -22,10 +24,21 @@ class AAbilityScores extends Component {
   }
 
   render() {
+
+    const {abilities, handleAbilityIncrement} = this.props
+
     return (
       <Fragment>
         <Container>
           <Header title="Ability Scores" />
+
+          <Distributor
+            cost={1}
+            handleIncrement={handleAbilityIncrement}
+            name="ability-str"
+            value={abilities.str}
+          />
+
           <Button 
             className="back-button"
             onClick={this.handleBackNavigation}
