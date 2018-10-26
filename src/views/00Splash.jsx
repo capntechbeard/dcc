@@ -12,7 +12,6 @@ class Splash extends Component {
   }
 
   handleNavigation() {
-    console.log ('test')
     const {navigateToPage} = this.props
     navigateToPage ('ACharacterCreateMenu')
   }
@@ -20,8 +19,8 @@ class Splash extends Component {
   render() {
     return (
       <Fragment>
-        <Container title="it's anything else he said">
-          <Header title="HEADER!" />
+        <Container title="Subtitle?">
+          <Header title="Diabolic Content Creator" />
           <Button 
             className="next-button"
             onClick={this.handleNavigation}

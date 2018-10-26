@@ -57,6 +57,49 @@ class App extends Component {
               navigateToPage={this.navigateToPage}
             />
         }
+        {
+          currentPage === 'APersonality' &&
+            <APersonality
+              navigateToPage={this.navigateToPage}
+            />
+        }
+        {
+          currentPage === 'ACharacterTraits' &&
+            <ACharacterTraits
+              navigateToPage={this.navigateToPage}
+            />
+        }
+        {
+          currentPage === 'AProfession' &&
+            <AProfession
+              navigateToPage={this.navigateToPage}
+            />
+        }
+        {
+          currentPage === 'ARace' &&
+            <ARace
+              navigateToPage={this.navigateToPage}
+            />
+        }
+        {
+          currentPage === 'ASkills' &&
+            <ASkills
+              navigateToPage={this.navigateToPage}
+            />
+        }
+        {
+          currentPage === 'AShop' &&
+            <AShop
+              navigateToPage={this.navigateToPage}
+            />
+        }
+        {
+          currentPage === 'ACharacterSheet' &&
+            <ACharacterSheet
+              navigateToPage={this.navigateToPage}
+            />
+        }
+        
       </div>
     );
   }
