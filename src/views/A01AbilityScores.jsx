@@ -25,7 +25,7 @@ class AAbilityScores extends Component {
 
   render() {
 
-    const {abilities, handleAbilityIncrement} = this.props
+    const {abilities, handleAbilityDecrement, handleAbilityIncrement} = this.props
 
     return (
       <Fragment>
@@ -35,9 +35,46 @@ class AAbilityScores extends Component {
           <Distributor
             cost={1}
             handleIncrement={handleAbilityIncrement}
-            name="ability-str"
+            handleDecrement={handleAbilityDecrement}
+            buttonClass="ability-str"
             value={abilities.str}
           />
+          <Distributor
+            cost={1}
+            handleIncrement={handleAbilityIncrement}
+            handleDecrement={handleAbilityDecrement}
+            buttonClass="ability-end"
+            value={abilities.end}
+          />
+          <Distributor
+            cost={1}
+            handleIncrement={handleAbilityIncrement}
+            handleDecrement={handleAbilityDecrement}
+            buttonClass="ability-agi"
+            value={abilities.agi}
+          />
+          <Distributor
+            cost={1}
+            handleIncrement={handleAbilityIncrement}
+            handleDecrement={handleAbilityDecrement}
+            buttonClass="ability-kno"
+            value={abilities.kno}
+          />
+          <Distributor
+            cost={1}
+            handleIncrement={handleAbilityIncrement}
+            handleDecrement={handleAbilityDecrement}
+            buttonClass="ability-wis"
+            value={abilities.wis}
+          />
+          <Distributor
+            cost={1}
+            handleIncrement={handleAbilityIncrement}
+            handleDecrement={handleAbilityDecrement}
+            buttonClass="ability-cha"
+            value={abilities.cha}
+          />
+          
 
           <Button 
             className="back-button"

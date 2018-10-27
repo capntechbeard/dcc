@@ -33,6 +33,7 @@ class App extends Component {
 
     this.navigateToPage = this.navigateToPage.bind(this)
     this.handleAbilityIncrement = this.handleAbilityIncrement.bind(this)
+    this.handleAbilityDecrement = this.handleAbilityDecrement.bind(this)
   }
 
   navigateToPage(page) {
@@ -43,8 +44,8 @@ class App extends Component {
     )
   }
 
-  handleAbilityIncrement(event) {
-    const {id} = event.currentTarget;
+  handleAbilityChange(event, isInc) {
+    const {className} = event.currentTarget;
     const { abilities } = this.state;
     let str = abilities.str;
     let end = abilities.end;
@@ -53,8 +54,28 @@ class App extends Component {
     let wis = abilities.wis;
     let cha = abilities.cha;
 
-    if (id === 'increment-ability-str') {
-      str++
+    if (className.indexOf('ability-str') > -1) {
+      isInc ? str++ : str--;
+    }
+
+    if (className.indexOf('ability-end') > -1) {
+      isInc ? end++ : end--;
+    }
+
+    if (className.indexOf('ability-agi') > -1) {
+      isInc ? agi++ : agi--;
+    }
+
+    if (className.indexOf('ability-kno') > -1) {
+      isInc ? kno++ : kno--;
+    }
+
+    if (className.indexOf('ability-wis') > -1) {
+      isInc ? wis++ : wis--;
+    }
+
+    if (className.indexOf('ability-cha') > -1) {
+      isInc ? cha++ : cha--;
     }
 
     this.setState (
@@ -69,6 +90,14 @@ class App extends Component {
         }
       }
     )
+  }
+
+  handleAbilityIncrement(event) {
+    this.handleAbilityChange(event, true);
+  }
+
+  handleAbilityDecrement(event) {
+    this.handleAbilityChange(event, false);
   }
 
   render() {
@@ -92,6 +121,7 @@ class App extends Component {
             <AAbilityScores
               abilities={abilities}
               handleAbilityIncrement={this.handleAbilityIncrement}
+              handleAbilityDecrement={this.handleAbilityDecrement}
               navigateToPage={this.navigateToPage}
             />
         }
