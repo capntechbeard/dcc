@@ -31,48 +31,48 @@ class AAbilityScores extends Component {
       <Fragment>
         <Container>
           <Header title="Ability Scores" />
-
+          {abilities.points}
           <Distributor
-            cost={1}
+            cost={abilities.str.cost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-str"
-            value={abilities.str}
+            value={abilities.str.val}
           />
           <Distributor
-            cost={1}
+            cost={abilities.end.cost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-end"
-            value={abilities.end}
+            value={abilities.end.val}
           />
           <Distributor
-            cost={1}
+            cost={abilities.agi.cost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-agi"
-            value={abilities.agi}
+            value={abilities.agi.val}
           />
           <Distributor
-            cost={1}
+            cost={abilities.kno.cost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-kno"
-            value={abilities.kno}
+            value={abilities.kno.val}
           />
           <Distributor
-            cost={1}
+            cost={abilities.wis.cost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-wis"
-            value={abilities.wis}
+            value={abilities.wis.val}
           />
           <Distributor
-            cost={1}
+            cost={abilities.cha.cost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-cha"
-            value={abilities.cha}
+            value={abilities.cha.val}
           />
           
 

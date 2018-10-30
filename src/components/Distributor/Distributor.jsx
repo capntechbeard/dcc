@@ -17,7 +17,7 @@ const Distributor = props => {
       <button 
         className={`distributor__dec ${buttonClass}`}
         onClick={handleDecrement}>
-        <img src='/images/svgs/circle.svg' />
+        <img src='/images/svgs/button_minus.svg' />
       </button>
       <div
         className='distributor__value'>
@@ -26,7 +26,7 @@ const Distributor = props => {
       <button 
         className={`distributor__inc ${buttonClass}`}
         onClick={handleIncrement}>
-        <img src='/images/svgs/circle.svg' />
+        <img src='/images/svgs/button_plus.svg' />
       </button>
       <div
         className='distributor__cost'>

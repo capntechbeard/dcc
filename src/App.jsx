@@ -21,12 +21,31 @@ class App extends Component {
 
     this.state = {
       abilities: {
-        str: 1,
-        end: 1,
-        agi: 1,
-        kno: 1,
-        wis: 1,
-        cha: 1
+        points: 50,
+        str: {
+          cost: 1,
+          val: 1
+        },
+        end: {
+          cost: 1,
+          val: 1
+        },
+        agi: {
+          cost: 1,
+          val: 1
+        },
+        kno: {
+          cost: 1,
+          val: 1
+        },
+        wis: {
+          cost: 1,
+          val: 1
+        },
+        cha: {
+          cost: 1,
+          val: 1
+        }
       },
       currentPage: 'Splash'
     }
@@ -44,43 +63,109 @@ class App extends Component {
     )
   }
 
+  calcAbilityPoints(current, isInc) {
+    if(current < 7 && isInc) {
+      return 1;
+    }
+    else if (current >= 7 && isInc) {
+      return 2;
+    }
+    else if (current < 8 && !isInc) {
+      return -1;
+    }
+    else if (current >= 8 && !isInc) {
+      return -2;
+    }
+  }
+
   handleAbilityChange(event, isInc) {
     const {className} = event.currentTarget;
     const { abilities } = this.state;
-    let str = abilities.str;
-    let end = abilities.end;
-    let agi = abilities.agi;
-    let kno = abilities.kno;
-    let wis = abilities.wis;
-    let cha = abilities.cha;
+    let { points, str, end, agi, kno, wis, cha } = abilities
+    let newPoints
 
     if (className.indexOf('ability-str') > -1) {
-      isInc ? str++ : str--;
+      let { val } = str
+      if (!isInc && val === 1) { return }
+      const cost = this.calcAbilityPoints(val, isInc)
+      newPoints = points - cost;
+      if (newPoints < 0 || val === 15 && isInc ) { return }
+      isInc ? val++ : val--;
+      str = { 
+        val, 
+        cost: Math.abs(cost)
+      }
     }
 
     if (className.indexOf('ability-end') > -1) {
-      isInc ? end++ : end--;
+      let { val } = end
+      if (!isInc && val === 1) { return }
+      const cost = this.calcAbilityPoints(val, isInc)
+      newPoints = points - cost;
+      if (newPoints < 0 || val === 15 && isInc ) { return }
+      isInc ? val++ : val--;
+      end = { 
+        val, 
+        cost: Math.abs(cost)
+      }
     }
 
     if (className.indexOf('ability-agi') > -1) {
-      isInc ? agi++ : agi--;
+      let { val } = agi
+      if (!isInc && val === 1) { return }
+      const cost = this.calcAbilityPoints(val, isInc)
+      newPoints = points - cost;
+      if (newPoints < 0 || val === 15 && isInc ) { return }
+      isInc ? val++ : val--;
+      agi = { 
+        val, 
+        cost: Math.abs(cost)
+      }
     }
 
     if (className.indexOf('ability-kno') > -1) {
-      isInc ? kno++ : kno--;
+      let { val } = kno
+      if (!isInc && val === 1) { return }
+      const cost = this.calcAbilityPoints(val, isInc)
+      newPoints = points - cost;
+      if (newPoints < 0 || val === 15 && isInc ) { return }
+      isInc ? val++ : val--;
+      kno = { 
+        val, 
+        cost: Math.abs(cost)
+      }
     }
 
     if (className.indexOf('ability-wis') > -1) {
-      isInc ? wis++ : wis--;
+      let { val } = wis
+      if (!isInc && val === 1) { return }
+      const cost = this.calcAbilityPoints(val, isInc)
+      newPoints = points - cost;
+      if (newPoints < 0 || val === 15 && isInc ) { return }
+      isInc ? val++ : val--;
+      wis = { 
+        val, 
+        cost: Math.abs(cost)
+      }
     }
 
     if (className.indexOf('ability-cha') > -1) {
-      isInc ? cha++ : cha--;
+      let { val } = cha
+      if (!isInc && val === 1) { return }
+      const cost = this.calcAbilityPoints(val, isInc)
+      newPoints = points - cost;
+      if (newPoints < 0 || val === 15 && isInc ) { return }
+      isInc ? val++ : val--;
+      cha = { 
+        val, 
+        cost: Math.abs(cost)
+      }
     }
 
     this.setState (
       {
         abilities: {
+          points: newPoints,
           str,
           end,
           agi,
