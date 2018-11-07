@@ -6,7 +6,7 @@ const getDistributorClasses = (customClass) => {
 }
 
 const Distributor = props => {
-  const { buttonClass, className, cost, handleDecrement, handleIncrement, 
+  const { buttonClass, className, handleDecrement, handleIncrement, nextCost,
     value } = props;
 
   const classes = getDistributorClasses(className)
@@ -29,8 +29,8 @@ const Distributor = props => {
         <img src='/images/svgs/button_plus.svg' />
       </button>
       <div
-        className='distributor__cost'>
-        {cost} 
+        className='distributor__next-cost'>
+        {nextCost} 
       </div>
     </div>
   )

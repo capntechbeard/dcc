@@ -31,44 +31,46 @@ class AAbilityScores extends Component {
       <Fragment>
         <Container>
           <Header title="Ability Scores" />
+
+
           {abilities.points}
           <Distributor
-            cost={abilities.str.cost}
+            nextCost={abilities.str.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-str"
             value={abilities.str.val}
           />
           <Distributor
-            cost={abilities.end.cost}
+            nextCost={abilities.end.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-end"
             value={abilities.end.val}
           />
           <Distributor
-            cost={abilities.agi.cost}
+            nextCost={abilities.agi.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-agi"
             value={abilities.agi.val}
           />
           <Distributor
-            cost={abilities.kno.cost}
+            nextCost={abilities.kno.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-kno"
             value={abilities.kno.val}
           />
           <Distributor
-            cost={abilities.wis.cost}
+            nextCost={abilities.wis.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-wis"
             value={abilities.wis.val}
           />
           <Distributor
-            cost={abilities.cha.cost}
+            nextCost={abilities.cha.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
             buttonClass="ability-cha"
@@ -84,6 +86,9 @@ class AAbilityScores extends Component {
             className="next-button"
             onClick={this.handleNavigation}
             text="NEXT" />
+
+
+
         </Container>
       </Fragment>
         

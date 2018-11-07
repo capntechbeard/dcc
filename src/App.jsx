@@ -23,27 +23,27 @@ class App extends Component {
       abilities: {
         points: 50,
         str: {
-          cost: 1,
+          nextCost: 1,
           val: 1
         },
         end: {
-          cost: 1,
+          nextCost: 1,
           val: 1
         },
         agi: {
-          cost: 1,
+          nextCost: 1,
           val: 1
         },
         kno: {
-          cost: 1,
+          nextCost: 1,
           val: 1
         },
         wis: {
-          cost: 1,
+          nextCost: 1,
           val: 1
         },
         cha: {
-          cost: 1,
+          nextCost: 1,
           val: 1
         }
       },
@@ -64,17 +64,37 @@ class App extends Component {
   }
 
   calcAbilityPoints(current, isInc) {
-    if(current < 7 && isInc) {
+    // Increment
+    if(current < 3 && isInc) {
       return 1;
     }
-    else if (current >= 7 && isInc) {
+    else if ((current >= 3 && current <=7 ) && isInc) {
       return 2;
     }
-    else if (current < 8 && !isInc) {
+    else if ((current === 8 ) && isInc) {
+      return 3;
+    }
+    else if ((current === 9 ) && isInc) {
+      return 4;
+    }
+    else if (current === 10 && isInc) {
+      return 5;
+    }
+    // Decrement
+    else if (current < 4 && !isInc) {
       return -1;
     }
-    else if (current >= 8 && !isInc) {
+    else if ((current >= 4 && current <=7) && !isInc) {
       return -2;
+    }
+    else if (current === 8  && !isInc) {
+      return -3;
+    }
+    else if (current === 9  && !isInc) {
+      return -4;
+    }
+    else if (current === 10 && !isInc) {
+      return -5;
     }
   }
 
@@ -89,11 +109,11 @@ class App extends Component {
       if (!isInc && val === 1) { return }
       const cost = this.calcAbilityPoints(val, isInc)
       newPoints = points - cost;
-      if (newPoints < 0 || val === 15 && isInc ) { return }
+      if (newPoints < 0 || val === 10 && isInc ) { return }
       isInc ? val++ : val--;
       str = { 
         val, 
-        cost: Math.abs(cost)
+        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -102,11 +122,11 @@ class App extends Component {
       if (!isInc && val === 1) { return }
       const cost = this.calcAbilityPoints(val, isInc)
       newPoints = points - cost;
-      if (newPoints < 0 || val === 15 && isInc ) { return }
+      if (newPoints < 0 || val === 10 && isInc ) { return }
       isInc ? val++ : val--;
       end = { 
         val, 
-        cost: Math.abs(cost)
+        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -115,11 +135,11 @@ class App extends Component {
       if (!isInc && val === 1) { return }
       const cost = this.calcAbilityPoints(val, isInc)
       newPoints = points - cost;
-      if (newPoints < 0 || val === 15 && isInc ) { return }
+      if (newPoints < 0 || val === 10 && isInc ) { return }
       isInc ? val++ : val--;
       agi = { 
         val, 
-        cost: Math.abs(cost)
+        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -128,11 +148,11 @@ class App extends Component {
       if (!isInc && val === 1) { return }
       const cost = this.calcAbilityPoints(val, isInc)
       newPoints = points - cost;
-      if (newPoints < 0 || val === 15 && isInc ) { return }
+      if (newPoints < 0 || val === 10 && isInc ) { return }
       isInc ? val++ : val--;
       kno = { 
         val, 
-        cost: Math.abs(cost)
+        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -141,11 +161,11 @@ class App extends Component {
       if (!isInc && val === 1) { return }
       const cost = this.calcAbilityPoints(val, isInc)
       newPoints = points - cost;
-      if (newPoints < 0 || val === 15 && isInc ) { return }
+      if (newPoints < 0 || val === 10 && isInc ) { return }
       isInc ? val++ : val--;
       wis = { 
         val, 
-        cost: Math.abs(cost)
+        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -154,11 +174,11 @@ class App extends Component {
       if (!isInc && val === 1) { return }
       const cost = this.calcAbilityPoints(val, isInc)
       newPoints = points - cost;
-      if (newPoints < 0 || val === 15 && isInc ) { return }
+      if (newPoints < 0 || val === 10 && isInc ) { return }
       isInc ? val++ : val--;
       cha = { 
         val, 
-        cost: Math.abs(cost)
+        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
