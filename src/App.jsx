@@ -68,23 +68,26 @@ class App extends Component {
     if(current < 3 && isInc) {
       return 1;
     }
-    else if ((current >= 3 && current <=7 ) && isInc) {
+    else if ((current >= 3 && current <=6 ) && isInc) {
       return 2;
     }
-    else if ((current === 8 ) && isInc) {
+    else if ((current === 7 ) && isInc) {
       return 3;
     }
-    else if ((current === 9 ) && isInc) {
+    else if ((current === 8 ) && isInc) {
       return 4;
     }
-    else if (current === 10 && isInc) {
+    else if (current === 9 && isInc) {
       return 5;
+    }
+    else if (current === 10 && isInc) {
+      return ;
     }
     // Decrement
     else if (current < 4 && !isInc) {
       return -1;
     }
-    else if ((current >= 4 && current <=7) && !isInc) {
+    else if ((current >= 4 && current <=7 ) && !isInc) {
       return -2;
     }
     else if (current === 8  && !isInc) {
@@ -113,7 +116,7 @@ class App extends Component {
       isInc ? val++ : val--;
       str = { 
         val, 
-        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -126,7 +129,7 @@ class App extends Component {
       isInc ? val++ : val--;
       end = { 
         val, 
-        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -139,7 +142,7 @@ class App extends Component {
       isInc ? val++ : val--;
       agi = { 
         val, 
-        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -152,7 +155,7 @@ class App extends Component {
       isInc ? val++ : val--;
       kno = { 
         val, 
-        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -165,7 +168,7 @@ class App extends Component {
       isInc ? val++ : val--;
       wis = { 
         val, 
-        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -178,7 +181,7 @@ class App extends Component {
       isInc ? val++ : val--;
       cha = { 
         val, 
-        nextCost: Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 

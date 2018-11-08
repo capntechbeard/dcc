@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Button from '../components/Button/Button'
 import Container from '../components/Container/Container'
 import Header from '../components/Header/Header'
+import SelectBar from '../components/SelectBar/SelectBar'
 
 class APersonality extends Component {
 
@@ -26,6 +27,41 @@ class APersonality extends Component {
       <Fragment>
         <Container>
           <Header title="Personality" />
+
+          <SelectBar selectButtons={[
+            {
+              imagePath: '/images/svgs/circle.svg',
+              onClick: () => {
+                alert('1');
+              }
+            },
+            {
+              imagePath: '/images/svgs/circle.svg',
+              onClick: () => {
+                alert('2');
+              }
+            },
+            {
+              imagePath: '/images/svgs/circle.svg',
+              onClick: () => {
+                alert('3');
+              }
+            },
+            {
+              imagePath: '/images/svgs/circle.svg',
+              onClick: () => {
+                alert('4');
+              }
+            },
+            {
+              imagePath: '/images/svgs/circle.svg',
+              onClick: () => {
+                alert('5');
+              }
+            }
+
+          ]} />
+
           <Button 
             className="back-button"
             onClick={this.handleBackNavigation}
