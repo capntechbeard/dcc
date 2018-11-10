@@ -23,44 +23,77 @@ class APersonality extends Component {
   }
 
   render() {
+
+
+    const {handlePersonalityChange, personality} = this.props
+
+    const selectButtons = [
+      {
+        active: personality === 1,
+        imagePath: '/images/svgs/circle.svg',
+        onClick: () => {
+          handlePersonalityChange(1);
+        }
+      },
+      {
+        active: personality === 2,
+        imagePath: '/images/svgs/circle.svg',
+        onClick: () => {
+          handlePersonalityChange(2);
+        }
+      },
+      {
+        active: personality === 3,
+        imagePath: '/images/svgs/circle.svg',
+        onClick: () => {
+          handlePersonalityChange(3);
+        }
+      },
+      {
+        active: personality === 4,
+        imagePathActive: '/images/svgs/circle-active.svg',
+        imagePath: '/images/svgs/circle.svg',
+        onClick: () => {
+          handlePersonalityChange(4);
+        }
+      },
+      {
+        active: personality === 5,
+        imagePath: '/images/svgs/circle.svg',
+        onClick: () => {
+          handlePersonalityChange(5);
+        }
+      }
+    ];
+
+    let description = ''
+
+    if (personality === 1) {
+      description = 'Evil'
+    } else if (personality === 2) {
+      description = 'Dishonorable'
+    } else if (personality === 3) {
+      description = (
+        <Fragment>
+          <h3>Neutral</h3>
+          <p>blah blah blah</p>
+        </Fragment>
+      )
+    } else if (personality === 4) {
+      description = 'Honorable'
+    } else if (personality === 5) {
+      description = 'Benevolent'
+    }
+
+
     return (
       <Fragment>
         <Container>
           <Header title="Personality" />
 
-          <SelectBar selectButtons={[
-            {
-              imagePath: '/images/svgs/circle.svg',
-              onClick: () => {
-                alert('1');
-              }
-            },
-            {
-              imagePath: '/images/svgs/circle.svg',
-              onClick: () => {
-                alert('2');
-              }
-            },
-            {
-              imagePath: '/images/svgs/circle.svg',
-              onClick: () => {
-                alert('3');
-              }
-            },
-            {
-              imagePath: '/images/svgs/circle.svg',
-              onClick: () => {
-                alert('4');
-              }
-            },
-            {
-              imagePath: '/images/svgs/circle.svg',
-              onClick: () => {
-                alert('5');
-              }
-            }
+          <SelectBar selectButtons={selectButtons} />
 
-          ]} />
+          <div className='personality-text'>{ description }</div>
 
           <Button 
             className="back-button"

@@ -5,8 +5,9 @@ const SelectBar = props => {
   const { selectButtons } = props
 
   const selectButtonsNodes = selectButtons.map(selectButton => {
+    const className=`select-bar__button ${selectButton.active ? 'active' : ''}`
     return (
-      <div className="select-bar__button">
+      <div className={ className }>
         <img 
         onClick={selectButton.onClick}
         src={ selectButton.imagePath }/>

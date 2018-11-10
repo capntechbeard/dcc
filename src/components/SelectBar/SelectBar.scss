@@ -9,10 +9,13 @@
     flex: 1 0 auto;
     height: 44px;
 
+    &.active {
+      border: coral solid 2px;
+    }
+
     img {
       height: 44px;
       width: 44px;
     }
   }
 }
-

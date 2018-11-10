@@ -3,6 +3,7 @@ import Button from '../components/Button/Button'
 import Container from '../components/Container/Container'
 import Distributor from '../components/Distributor/Distributor'
 import Header from '../components/Header/Header'
+import AbilityPoints from '../components/AbilityPoints/AbilityPoints'
 
 
 class AAbilityScores extends Component {
@@ -32,9 +33,11 @@ class AAbilityScores extends Component {
         <Container>
           <Header title="Ability Scores" />
 
-
-          {abilities.points}
+          <AbilityPoints 
+            score={abilities.points}/>
+          
           <Distributor
+            ability="Strength"
             nextCost={abilities.str.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
@@ -42,6 +45,7 @@ class AAbilityScores extends Component {
             value={abilities.str.val}
           />
           <Distributor
+            ability="Endurance"
             nextCost={abilities.end.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
@@ -49,6 +53,7 @@ class AAbilityScores extends Component {
             value={abilities.end.val}
           />
           <Distributor
+            ability="Agility"
             nextCost={abilities.agi.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
@@ -56,6 +61,7 @@ class AAbilityScores extends Component {
             value={abilities.agi.val}
           />
           <Distributor
+            ability="Knowledge"
             nextCost={abilities.kno.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
@@ -63,6 +69,7 @@ class AAbilityScores extends Component {
             value={abilities.kno.val}
           />
           <Distributor
+            ability="Wisdom"
             nextCost={abilities.wis.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}
@@ -70,6 +77,7 @@ class AAbilityScores extends Component {
             value={abilities.wis.val}
           />
           <Distributor
+            ability="Charisma"
             nextCost={abilities.cha.nextCost}
             handleIncrement={handleAbilityIncrement}
             handleDecrement={handleAbilityDecrement}

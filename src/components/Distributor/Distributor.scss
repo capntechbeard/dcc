@@ -1,4 +1,11 @@
-.distributor {
+.ability-title {
+    font-size: 2em;
+    position: absolute;
+    margin: 0 0 0 2em;
+   
+}
+
+.distributor__box {
     display: flex;
     font-weight: 900;
     font-size: 1.2rem;
@@ -6,10 +13,11 @@
     border-radius: 6px;
     width: 164px;
     height: 38px;
-    margin: 4px auto;
+    margin: 4px 300px;
     background-color: gray;
     align-items: center;
     padding: 0 2px;
+    
 
     button {
         width: 34px;
@@ -31,28 +39,28 @@
             outline: 0;
     }
 
-    .distributor__dec {
+    .distributor-box__dec {
         background-color: lightgrey;
     }
 
-    .distributor__dec:active {
+    .distributor-box__dec:active {
         background-color: darkgrey;
     }
 
-    .distributor__inc {
+    .distributor-box__inc {
         background-color: lightgrey;
     }
 
-    .distributor__inc:active {
+    .distributor-box__inc:active {
         background-color: darkgrey;
     }
 
-    .distributor__cost {
+    .distributor-box__cost {
         width: 2rem;
         color: darkred;
     }
 
-    .distributor__value {
+    .distributor-box__value {
         width: 3rem;
         color: whitesmoke;
     }

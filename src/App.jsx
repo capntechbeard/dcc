@@ -47,12 +47,14 @@ class App extends Component {
           val: 1
         }
       },
-      currentPage: 'Splash'
+      currentPage: 'Splash',
+      personality: 3
     }
 
     this.navigateToPage = this.navigateToPage.bind(this)
     this.handleAbilityIncrement = this.handleAbilityIncrement.bind(this)
     this.handleAbilityDecrement = this.handleAbilityDecrement.bind(this)
+    this.handlePersonalityChange = this.handlePersonalityChange.bind(this)
   }
 
   navigateToPage(page) {
@@ -116,7 +118,7 @@ class App extends Component {
       isInc ? val++ : val--;
       str = { 
         val, 
-        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'X' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -129,7 +131,7 @@ class App extends Component {
       isInc ? val++ : val--;
       end = { 
         val, 
-        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'X' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -142,7 +144,7 @@ class App extends Component {
       isInc ? val++ : val--;
       agi = { 
         val, 
-        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'X' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -155,7 +157,7 @@ class App extends Component {
       isInc ? val++ : val--;
       kno = { 
         val, 
-        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'X' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -168,7 +170,7 @@ class App extends Component {
       isInc ? val++ : val--;
       wis = { 
         val, 
-        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'X' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -181,7 +183,7 @@ class App extends Component {
       isInc ? val++ : val--;
       cha = { 
         val, 
-        nextCost: val === 10 ?  'n/a' : Math.abs(this.calcAbilityPoints(val, true))  
+        nextCost: val === 10 ?  'X' : Math.abs(this.calcAbilityPoints(val, true))  
       }
     }
 
@@ -208,8 +210,12 @@ class App extends Component {
     this.handleAbilityChange(event, false);
   }
 
+  handlePersonalityChange(personality) {
+    this.setState ({ personality });
+  }
+
   render() {
-    const {abilities, currentPage} = this.state
+    const {abilities, currentPage, personality} = this.state
     return (
       <div className="App">
         {
@@ -236,7 +242,9 @@ class App extends Component {
         {
           currentPage === 'APersonality' &&
             <APersonality
+              handlePersonalityChange={this.handlePersonalityChange}
               navigateToPage={this.navigateToPage}
+              personality={personality}
             />
         }
         {
