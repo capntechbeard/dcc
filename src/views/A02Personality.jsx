@@ -30,36 +30,40 @@ class APersonality extends Component {
     const selectButtons = [
       {
         active: personality === 1,
-        imagePath: '/images/svgs/circle.svg',
+        imagePathActive: '/images/svgs/personality_1_active.svg',
+        imagePath: '/images/svgs/personality_1.svg',
         onClick: () => {
           handlePersonalityChange(1);
         }
       },
       {
         active: personality === 2,
-        imagePath: '/images/svgs/circle.svg',
+        imagePathActive: '/images/svgs/personality_2_active.svg',
+        imagePath: '/images/svgs/personality_2.svg',
         onClick: () => {
           handlePersonalityChange(2);
         }
       },
       {
         active: personality === 3,
-        imagePath: '/images/svgs/circle.svg',
+        imagePathActive: '/images/svgs/personality_3_active.svg',
+        imagePath: '/images/svgs/personality_3.svg',
         onClick: () => {
           handlePersonalityChange(3);
         }
       },
       {
         active: personality === 4,
-        imagePathActive: '/images/svgs/circle-active.svg',
-        imagePath: '/images/svgs/circle.svg',
+        imagePathActive: '/images/svgs/personality_4_active.svg',
+        imagePath: '/images/svgs/personality_4.svg',
         onClick: () => {
           handlePersonalityChange(4);
         }
       },
       {
         active: personality === 5,
-        imagePath: '/images/svgs/circle.svg',
+        imagePathActive: '/images/svgs/personality_5_active.svg',
+        imagePath: '/images/svgs/personality_5.svg',
         onClick: () => {
           handlePersonalityChange(5);
         }
@@ -69,20 +73,44 @@ class APersonality extends Component {
     let description = ''
 
     if (personality === 1) {
-      description = 'Evil'
+      description = (
+        <Fragment>
+          <h3>Evil</h3>
+          <p>Your goals are selfish by nature, and you pay little heed to order,
+             unless you're using it for your own means.</p>
+        </Fragment>
+      )
     } else if (personality === 2) {
-      description = 'Dishonorable'
+      description = (
+        <Fragment>
+          <h3>Dishonorable</h3>
+          <p>You strive to achieve your goals in life through nearly any means,
+             though you are not inherently evil.</p>
+        </Fragment>
+      )
     } else if (personality === 3) {
       description = (
         <Fragment>
           <h3>Neutral</h3>
-          <p>blah blah blah</p>
+          <p>Your interests rarely stray outside of your own goals,
+             and your methods are typically only as extreme as necessary.</p>
         </Fragment>
       )
     } else if (personality === 4) {
-      description = 'Honorable'
+      description = (
+        <Fragment>
+          <h3>Honorable</h3>
+          <p>You strive to achieve your goals in life through honest work.</p>
+        </Fragment>
+      )
     } else if (personality === 5) {
-      description = 'Benevolent'
+      description = (
+        <Fragment>
+          <h3>Benevolent</h3>
+          <p>You preform good deeds and follow righteous morals
+             for the sake of goodness, peace, order, or other benevolent purposes.</p>
+        </Fragment>
+      )
     }
 
 
