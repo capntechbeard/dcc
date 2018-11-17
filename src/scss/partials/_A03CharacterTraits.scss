@@ -1,0 +1,28 @@
+.traits-wrapper {
+    display: flex;
+    height: 290px;
+
+    .traits-wrapper__left {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column; 
+
+        .traits-wrapper-left__top {
+            display: flex;
+            flex: 0 0 auto;
+
+            .select-bar {
+                flex: 1 0 auto;
+                align-self: start;
+            }
+        }
+
+        .traits-wrapper-left__bottom {
+            overflow: auto;
+            padding: 2px;
+        }
+    }
+    .traits-wrapper__right {
+        flex: 0 0 200px;
+    }
+}

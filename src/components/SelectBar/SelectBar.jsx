@@ -10,7 +10,7 @@ const SelectBar = props => {
       <div className={ className }>
         <img 
         onClick={selectButton.onClick}
-        src={ selectButton.imagePath }/>
+        src={ selectButton.active ? selectButton.imagePathActive : selectButton.imagePath  }/>
       </div>
     )
   })

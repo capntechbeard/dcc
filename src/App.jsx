@@ -47,6 +47,9 @@ class App extends Component {
           val: 1
         }
       },
+      traits: {
+        points: 0
+      },
       currentPage: 'Splash',
       personality: 3
     }

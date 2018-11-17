@@ -1,0 +1,70 @@
+{
+    "character": {
+        "ability": {
+            "points": 50,
+            "str": 1,
+            "end": 1,
+            "agi": 1,
+            "kno": 1,
+            "wis": 1,
+            "cha": 1
+        },
+        "personality": 3,
+        "traits": {
+            "negative" : 0,
+            "positive" : 0,
+            "selected" : {
+                "negative" :{
+                    "dummy_greater" : 20
+                },
+                "positive" : {
+                    "dummy_greater" : 20
+                }
+            }
+        },
+        "profession": 1,
+        "race": "human",
+        "skills": {
+            "points": 30,
+            "selected": {
+                "warrior": {
+                    "dummy": 0
+                },
+                "spiritualist": {
+                    "dummy": 0
+                },
+                "arcanist": {
+                    "dummy": 0
+                },
+                "general":{
+                    "str": {
+                        "dummy": 0
+                    },
+                    "end": {
+                        "dummy": 0
+                    },
+                    "agi": {
+                        "dummy": 0
+                    },
+                    "kno": {
+                        "dummy": 0
+                    },
+                    "wis": {
+                        "dummy": 0
+                    },
+                    "cha": {
+                        "dummy": 0
+                    }
+                }
+            }
+        },
+        "inventory": {
+            "item_template":{
+                "name": 0,
+                "description": "none",
+                "cost": 0,
+                "weight": 0
+            }
+        }
+    }
+}
