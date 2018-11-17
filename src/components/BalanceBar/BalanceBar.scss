@@ -1,0 +1,13 @@
+.balance-bar {
+    display: flex;
+
+    .balance-bar__left {
+        flex: 1 1 auto
+    }
+    .balance-bar__middle {
+        flex: 1 1 auto
+    }
+    .balance-bar__right {
+        flex: 1 1 auto
+    }
+}

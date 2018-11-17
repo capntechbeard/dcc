@@ -48,7 +48,9 @@ class App extends Component {
         }
       },
       traits: {
-        points: 0
+        category: 1,
+        negative: 0,
+        positive: 0
       },
       currentPage: 'Splash',
       personality: 3
@@ -58,6 +60,7 @@ class App extends Component {
     this.handleAbilityIncrement = this.handleAbilityIncrement.bind(this)
     this.handleAbilityDecrement = this.handleAbilityDecrement.bind(this)
     this.handlePersonalityChange = this.handlePersonalityChange.bind(this)
+    this.handleSelectedTraitCategoryChange = this.handleSelectedTraitCategoryChange.bind(this)
   }
 
   navigateToPage(page) {
@@ -217,8 +220,18 @@ class App extends Component {
     this.setState ({ personality });
   }
 
+  handleSelectedTraitCategoryChange(category) {
+    this.setState ({ 
+      traits: { 
+        ...this.state.traits,
+        category 
+      }
+    });
+  }
+
   render() {
-    const {abilities, currentPage, personality} = this.state
+    const {abilities, currentPage, personality, traits} = this.state
+    const {category} = traits
     return (
       <div className="App">
         {
@@ -253,6 +266,8 @@ class App extends Component {
         {
           currentPage === 'ACharacterTraits' &&
             <ACharacterTraits
+              category={category}
+              handleSelectedTraitCategoryChange={this.handleSelectedTraitCategoryChange}
               navigateToPage={this.navigateToPage}
             />
         }

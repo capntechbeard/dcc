@@ -1,5 +1,18 @@
 {
     "character": {
+        "description": {
+            "name": "Template",
+            "eyes": "Void",
+            "hair": "Void",
+            "height": "Void",
+            "weight": "Void"
+        },
+        "level": {
+            "level": 1,
+            "xp": 0,
+            "txp": 0,
+            "cp": 0
+        },
         "ability": {
             "points": 50,
             "str": 1,
@@ -11,19 +24,19 @@
         },
         "personality": 3,
         "traits": {
-            "negative" : 0,
-            "positive" : 0,
+            "negative" : 2,
+            "positive" : 2,
             "selected" : {
                 "negative" :{
-                    "dummy_greater" : 20
+                    "dummy_greater" : 0
                 },
                 "positive" : {
-                    "dummy_greater" : 20
+                    "dummy_greater" : 0
                 }
             }
         },
         "profession": 1,
-        "race": "human",
+        "race": "Human",
         "skills": {
             "points": 30,
             "selected": {
@@ -55,15 +68,17 @@
                     "cha": {
                         "dummy": 0
                     }
-                }
+                },
+                "armor": 0
             }
         },
         "inventory": {
             "item_template":{
-                "name": 0,
-                "description": "none",
+                "name": "Item Template",
+                "description": "None.",
                 "cost": 0,
-                "weight": 0
+                "weight": 0,
+                "size": 0
             }
         }
     }
