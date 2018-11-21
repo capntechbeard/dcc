@@ -24,29 +24,41 @@ class ACharacterTraits extends Component {
   }
 
   render() {
-    const {handleSelectedTraitCategoryChange, category} = this.props
+    const {handleSelectedTraitCategoryChange, traits} = this.props
+    const {category, categories} = traits
+    const categoryData = categories[category]
+    const keys = Object.keys(categoryData)
+    const balanceBars = keys.map(key => {
+      return (
+        <BalanceBar 
+          negativeText={categoryData[key].negativeText}
+          positiveText={categoryData[key].positiveText}
+          lesser={categoryData[key].lesser}
+          greater={categoryData[key].greater} />
+      )
+    })
 
     const selectButtonsLeft = [
       {
-        active: category === 1,
-        imagePathActive: '/images/svgs/personality_1_active.svg',
-        imagePath: '/images/svgs/personality_1.svg',
+        active: category === 'warrior',
+        imagePathActive: '/images/svgs/warrior_active.svg',
+        imagePath: '/images/svgs/warrior.svg',
         onClick: () => {
-          handleSelectedTraitCategoryChange(1);
+          handleSelectedTraitCategoryChange('warrior');
         }
       },
       {
-        active: category === 2,
-        imagePathActive: '/images/svgs/personality_2_active.svg',
-        imagePath: '/images/svgs/personality_2.svg',
+        active: category === 'spiritualist',
+        imagePathActive: '/images/svgs/spiritualist_active.svg',
+        imagePath: '/images/svgs/spiritualist.svg',
         onClick: () => {
-          handleSelectedTraitCategoryChange(2);
+          handleSelectedTraitCategoryChange('spiritualist');
         }
       },
       {
-        active: category === 3,
-        imagePathActive: '/images/svgs/personality_3_active.svg',
-        imagePath: '/images/svgs/personality_3.svg',
+        active: category === 'arcanist',
+        imagePathActive: '/images/svgs/arcanist_active.svg',
+        imagePath: '/images/svgs/arcanist.svg',
         onClick: () => {
           handleSelectedTraitCategoryChange(3);
         }
@@ -93,9 +105,8 @@ class ACharacterTraits extends Component {
                 <SelectBar selectButtons={selectButtonsRight}/>
               </div>
               <div className='traits-wrapper-left__bottom'>
-              { category }
 
-              <BalanceBar/>
+              {balanceBars}
 
               </div>
             </div>

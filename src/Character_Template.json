@@ -24,8 +24,8 @@
         },
         "personality": 3,
         "traits": {
-            "negative" : 2,
-            "positive" : 2,
+            "negative" : 0,
+            "positive" : 0,
             "selected" : {
                 "negative" :{
                     "dummy_greater" : 0

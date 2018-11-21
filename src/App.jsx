@@ -12,6 +12,8 @@ import AShop from './views/A07Shop'
 import ACharacterSheet from './views/A08CharacterSheet'
 import BCharacterLibrary from './views/B00CharacterLibrary'
 
+import traits from './lib/constants/traits'
+
 
 
 class App extends Component {
@@ -47,11 +49,7 @@ class App extends Component {
           val: 1
         }
       },
-      traits: {
-        category: 1,
-        negative: 0,
-        positive: 0
-      },
+      traits,
       currentPage: 'Splash',
       personality: 3
     }
@@ -231,7 +229,6 @@ class App extends Component {
 
   render() {
     const {abilities, currentPage, personality, traits} = this.state
-    const {category} = traits
     return (
       <div className="App">
         {
@@ -266,9 +263,9 @@ class App extends Component {
         {
           currentPage === 'ACharacterTraits' &&
             <ACharacterTraits
-              category={category}
               handleSelectedTraitCategoryChange={this.handleSelectedTraitCategoryChange}
               navigateToPage={this.navigateToPage}
+              traits={ traits }
             />
         }
         {
