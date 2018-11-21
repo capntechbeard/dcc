@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="128px" height="128px" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve">
+<g>
+	<path fill="#BE1E2D" d="M64,126C29.813,126,2,98.187,2,64C2,29.813,29.813,2,64,2c34.187,0,62,27.813,62,62
+		C126,98.187,98.187,126,64,126z"/>
+	<path fill="#009444" d="M64,4c33.084,0,60,26.916,60,60s-26.916,60-60,60S4,97.084,4,64S30.916,4,64,4 M64,0
+		C28.653,0,0,28.653,0,64s28.653,64,64,64s64-28.653,64-64S99.347,0,64,0L64,0z"/>
+</g>
+<g>
+	
+		<polygon fill="#414042" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		38.756,56.919 77.34,95.503 92.738,101.738 86.504,86.34 47.919,47.756 59.382,36.294 55,31.913 43.538,43.375 26.425,26.262 
+		21.844,30.843 17.262,35.425 34.375,52.538 22.912,64 27.294,68.382 	"/>
+	
+		<polygon fill="#414042" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		81.08,47.756 42.497,86.34 36.262,101.738 51.66,95.504 90.244,56.919 101.706,68.382 106.087,64 94.625,52.538 111.738,35.425 
+		107.156,30.844 102.574,26.262 85.462,43.375 74,31.912 69.618,36.294 	"/>
+</g>
+</svg>
