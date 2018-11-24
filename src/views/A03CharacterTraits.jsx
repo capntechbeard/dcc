@@ -60,34 +60,34 @@ class ACharacterTraits extends Component {
         imagePathActive: '/images/svgs/arcanist_active.svg',
         imagePath: '/images/svgs/arcanist.svg',
         onClick: () => {
-          handleSelectedTraitCategoryChange(3);
+          handleSelectedTraitCategoryChange('arcanist');
         }
       }
     ];
 
     const selectButtonsRight = [
       {
-        active: category === 4,
+        active: category === 'body',
         imagePathActive: '/images/svgs/body_trait_active.svg',
         imagePath: '/images/svgs/body_trait.svg',
         onClick: () => {
-          handleSelectedTraitCategoryChange(4);
+          handleSelectedTraitCategoryChange('body');
         }
       },
       {
-        active: category === 5,
+        active: category === 'personality',
         imagePathActive: '/images/svgs/personality_trait_active.svg',
         imagePath: '/images/svgs/personality_trait.svg',
         onClick: () => {
-          handleSelectedTraitCategoryChange(5);
+          handleSelectedTraitCategoryChange('personality');
         }
       },
       {
-        active: category === 6,
+        active: category === 'natural',
         imagePathActive: '/images/svgs/general_skills_active.svg',
         imagePath: '/images/svgs/general_skills.svg',
         onClick: () => {
-          handleSelectedTraitCategoryChange(6);
+          handleSelectedTraitCategoryChange('natural');
         }
       }
     ];
