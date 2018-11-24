@@ -68,24 +68,24 @@ class ACharacterTraits extends Component {
     const selectButtonsRight = [
       {
         active: category === 4,
-        imagePathActive: '/images/svgs/personality_1_active.svg',
-        imagePath: '/images/svgs/personality_1.svg',
+        imagePathActive: '/images/svgs/body_trait_active.svg',
+        imagePath: '/images/svgs/body_trait.svg',
         onClick: () => {
           handleSelectedTraitCategoryChange(4);
         }
       },
       {
         active: category === 5,
-        imagePathActive: '/images/svgs/personality_2_active.svg',
-        imagePath: '/images/svgs/personality_2.svg',
+        imagePathActive: '/images/svgs/personality_trait_active.svg',
+        imagePath: '/images/svgs/personality_trait.svg',
         onClick: () => {
           handleSelectedTraitCategoryChange(5);
         }
       },
       {
         active: category === 6,
-        imagePathActive: '/images/svgs/personality_3_active.svg',
-        imagePath: '/images/svgs/personality_3.svg',
+        imagePathActive: '/images/svgs/general_skills_active.svg',
+        imagePath: '/images/svgs/general_skills.svg',
         onClick: () => {
           handleSelectedTraitCategoryChange(6);
         }
