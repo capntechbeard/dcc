@@ -20,7 +20,7 @@ class Splash extends Component {
     return (
       <Fragment>
         <Container title="Subtitle?">
-          <Header title="Diabolic Content Creator" />
+          <Header title="Table-Top RPG Content Creator" />
           <Button 
             className="next-button"
             onClick={this.handleNavigation}
