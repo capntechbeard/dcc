@@ -24,17 +24,20 @@ class ACharacterTraits extends Component {
   }
 
   render() {
-    const {handleSelectedTraitCategoryChange, traits} = this.props
+    const {handleSelectedTraitCategoryChange, handleTraitSelection, traits} = this.props
     const {category, categories} = traits
     const categoryData = categories[category]
     const keys = Object.keys(categoryData)
     const balanceBars = keys.map(key => {
       return (
         <BalanceBar 
+          handleTraitSelection={handleTraitSelection}
           negativeText={categoryData[key].negativeText}
           positiveText={categoryData[key].positiveText}
           lesser={categoryData[key].lesser}
-          greater={categoryData[key].greater} />
+          greater={categoryData[key].greater}
+          selected={categoryData[key].selected}
+          traitKey={key} />
       )
     })
 

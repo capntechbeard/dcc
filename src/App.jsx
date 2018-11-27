@@ -59,6 +59,7 @@ class App extends Component {
     this.handleAbilityDecrement = this.handleAbilityDecrement.bind(this)
     this.handlePersonalityChange = this.handlePersonalityChange.bind(this)
     this.handleSelectedTraitCategoryChange = this.handleSelectedTraitCategoryChange.bind(this)
+    this.handleTraitSelection = this.handleTraitSelection.bind(this)
   }
 
   navigateToPage(page) {
@@ -227,6 +228,28 @@ class App extends Component {
     });
   }
 
+  handleTraitSelection(traitKey, traitValue) {
+    const { traits } = this.state
+    const { categories } = traits
+    const newState = {
+      traits: {
+        ...traits,
+        categories: {
+          ...categories,
+          [traits.category]: {
+            ...categories[traits.category],
+            [traitKey]: {
+              ...categories[traits.category][traitKey],
+              selected: traitValue
+            }
+          }
+        }
+      }
+    }
+    console.log(newState)
+    this.setState (newState)
+  }
+
   render() {
     const {abilities, currentPage, personality, traits} = this.state
     return (
@@ -263,6 +286,7 @@ class App extends Component {
         {
           currentPage === 'ACharacterTraits' &&
             <ACharacterTraits
+              handleTraitSelection={this.handleTraitSelection}
               handleSelectedTraitCategoryChange={this.handleSelectedTraitCategoryChange}
               navigateToPage={this.navigateToPage}
               traits={ traits }

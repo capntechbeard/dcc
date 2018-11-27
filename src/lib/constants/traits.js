@@ -15,7 +15,7 @@ export default {
                 lesser: 2,
                 greater: 4,
                 negativeText: "Pin-Cushioned",
-                positiveText: "Ranged Fighter",
+                positiveText: "Ranged",
                 selected: 0
 
             },
@@ -23,28 +23,28 @@ export default {
                 lesser: 1,
                 greater: 3,
                 negativeText: "Crushed",
-                positiveText: "Two-Handed Fighter",
+                positiveText: "Two-Handed",
                 selected: 0
             },
             4: {
                 lesser: 1,
                 greater: 3,
                 negativeText: "Battered",
-                positiveText: "Shield Fighter",
+                positiveText: "Shield",
                 selected: 0
             },
             5: {
                 lesser: 1,
                 greater: 3,
                 negativeText: "Minced",
-                positiveText: "Two-Weapon Fighter",
+                positiveText: "Two-Weapon",
                 selected: 0
             },
             6: {
                 lesser: 1,
                 greater: 3,
                 negativeText: "Stabbed",
-                positiveText: "One-Weapon Fighter",
+                positiveText: "One-Weapon",
                 selected: 0
             },
             7: {
