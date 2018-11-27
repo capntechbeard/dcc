@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import Splash from './views/00Splash'
 import ACharacterCreateMenu from './views/A00CharacterCreateMenu'
 import AAbilityScores from './views/A01AbilityScores'
