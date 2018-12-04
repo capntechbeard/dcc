@@ -4,6 +4,7 @@ import Container from '../components/Container/Container'
 import Header from '../components/Header/Header'
 import SelectBar from '../components/SelectBar/SelectBar'
 import BalanceBar from '../components/BalanceBar/BalanceBar'
+import TraitSheet from '../components/TraitSheet/TraitSheet'
 
 class ACharacterTraits extends Component {
 
@@ -113,7 +114,9 @@ class ACharacterTraits extends Component {
 
               </div>
             </div>
-            <div className='traits-wrapper__right'></div>
+            <div className='traits-wrapper__right'>
+              <TraitSheet traits={traits}></TraitSheet>
+            </div>
           </div>
 
 
