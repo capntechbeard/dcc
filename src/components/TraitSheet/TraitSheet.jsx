@@ -7,6 +7,8 @@ const TraitSheet = props => {
   const positiveTraits = []
   const negativeTraits = []
   const categories = convertObjectToArray (traits.categories)
+  traits.positive = 0
+  traits.negative = 0
 
   for (const category of categories) {
     const keys = Object.keys(category)
@@ -18,15 +20,25 @@ const TraitSheet = props => {
       const traitKey = traitKeys[0]
       const t = trait[traitKey]
       if (t.selected > 0) {
+        if (t.selected === 1){
+          traits.positive = traits.positive + t.lesser
+        } else if (t.selected === 2)  {
+          traits.positive = traits.positive + t.greater
+        }
         positiveTraits.push(
           <div className='trait-sheet__positive'>
-            <img src='' /> {t.positiveText}
+            <img src={t.image} /> {t.positiveText}
           </div>
         )
       } else if (t.selected < 0) {
+        if (t.selected === -1){
+          traits.positive = traits.positive - t.lesser
+        } else if (t.selected === -2)  {
+          traits.positive = traits.positive - t.greater
+        }
         negativeTraits.push(
           <div className='trait-sheet__negative'>
-            {t.positiveText}
+            <img src={t.image} /> {t.negativeText}
           </div>
         )
       }
@@ -38,9 +50,9 @@ const TraitSheet = props => {
 
   return (
     <div className="trait-sheet">
-        { positiveTraits }
+        <span>{ positiveTraits }</span>
         <hr />
-        { negativeTraits }
+        <span>{ negativeTraits }</span>
     </div>
   )
 }

@@ -125,6 +125,9 @@ class ACharacterTraits extends Component {
             className="back-button"
             onClick={this.handleBackNavigation}
             text="BACK" />
+
+          {traits.negative + traits.positive}
+
           <Button 
             className="next-button"
             onClick={this.handleNavigation}

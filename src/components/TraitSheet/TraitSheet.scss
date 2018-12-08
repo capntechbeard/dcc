@@ -1,0 +1,15 @@
+.trait-sheet {
+    font-weight: bold;
+    .trait-sheet__positive {
+        color: green;
+        img {
+            max-height: 18px;
+        }
+    }
+    .trait-sheet__negative {
+        color: red;
+        img {
+            max-height: 18px;
+        }
+    }
+}
