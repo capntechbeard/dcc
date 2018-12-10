@@ -1,5 +1,7 @@
 export default {
     category: "warrior",
+    negative: 0,
+    positive: 0,
     categories: {
         warrior: {
             1: {

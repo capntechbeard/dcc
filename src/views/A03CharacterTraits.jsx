@@ -5,7 +5,6 @@ import Header from '../components/Header/Header'
 import SelectBar from '../components/SelectBar/SelectBar'
 import BalanceBar from '../components/BalanceBar/BalanceBar'
 import TraitSheet from '../components/TraitSheet/TraitSheet'
-import {convertObjectToArray} from '../lib/utility'
 
 class ACharacterTraits extends Component {
 
@@ -14,62 +13,15 @@ class ACharacterTraits extends Component {
 
     this.handleNavigation = this.handleNavigation.bind(this)
     this.handleBackNavigation = this.handleBackNavigation.bind(this)
-    this.createTraitSheetNodes = this.createTraitSheetNodes.bind(this)
   }
 
   handleNavigation() {
     const {navigateToPage} = this.props
     navigateToPage ('AProfession')
   }
-
   handleBackNavigation() {
     const {navigateToPage} = this.props
     navigateToPage ('APersonality')
-  }
-
-  createTraitSheetNodes() {
-    const {traits} = this.props
-    const positiveTraitNodes = []
-    const negativeTraitNodes = []
-    const categories = convertObjectToArray (traits.categories)
-    let total = 0
-  
-    for (const category of categories) {
-      const keys = Object.keys(category)
-      const key = keys[0]
-      const categoryTraits = convertObjectToArray(category[key])
-  
-      for (const trait of categoryTraits) {
-        const traitKeys = Object.keys(trait)
-        const traitKey = traitKeys[0]
-        const t = trait[traitKey]
-        if (t.selected > 0) {
-          if (t.selected === 1){
-            total = total + t.lesser
-          } else if (t.selected === 2)  {
-            total = total + t.greater
-          }
-          positiveTraitNodes.push(
-            <div className='trait-sheet__positive'>
-              <img src={t.image} /> {t.positiveText} {t.selected === 1 ? '(L)' : '(G)'}
-            </div>
-          )
-        } else if (t.selected < 0) {
-          if (t.selected === -1){
-            total = total - t.lesser
-          } else if (t.selected === -2)  {
-            total = total - t.greater
-          }
-          negativeTraitNodes.push(
-            <div className='trait-sheet__negative'>
-              <img src={t.image} /> {t.negativeText} {t.selected === -1 ? '(L)' : '(G)'}
-            </div>
-          )
-        }
-      }
-    }
-
-    return {negativeTraitNodes, positiveTraitNodes, total}
   }
 
   render() {
@@ -144,7 +96,6 @@ class ACharacterTraits extends Component {
       }
     ];
 
-    const {negativeTraitNodes, positiveTraitNodes, total} = this.createTraitSheetNodes()
 
     return (
       <Fragment>
@@ -164,9 +115,7 @@ class ACharacterTraits extends Component {
               </div>
             </div>
             <div className='traits-wrapper__right'>
-              <TraitSheet 
-                negativeTraitNodes={negativeTraitNodes}
-                positiveTraitNodes={positiveTraitNodes} />
+              <TraitSheet traits={traits}></TraitSheet>
             </div>
           </div>
 
@@ -177,11 +126,10 @@ class ACharacterTraits extends Component {
             onClick={this.handleBackNavigation}
             text="BACK" />
 
-          {total}
+          {traits.negative + traits.positive}
 
           <Button 
             className="next-button"
-            isDisabled={total !== 0}
             onClick={this.handleNavigation}
             text="NEXT" />
         </Container>

@@ -92,7 +92,6 @@ class AAbilityScores extends Component {
             text="BACK" />
           <Button 
             className="next-button"
-            isDisabled={abilities.points !== 0}
             onClick={this.handleNavigation}
             text="NEXT" />
 
