@@ -254,7 +254,7 @@ export default {
             1: {
                 lesser: 2,
                 greater: 4,
-                negativeText: "Cowardice",
+                negativeText: "Coward",
                 positiveText: "Strong Willed",
                 selected: 0,
                 image: "/images/svgs/personality_trait.svg"
@@ -1293,6 +1293,15 @@ export default {
                 greater: 4,
                 negativeText: "NULL",
                 positiveText: "Writing",
+                selected: 0,
+                attribute: "KNO",
+                image: "/images/svgs/general_skills.svg"
+            },
+            109: {
+                lesser: 2,
+                greater: 4,
+                negativeText: "Illiterate",
+                positiveText: "Well-Read",
                 selected: 0,
                 attribute: "KNO",
                 image: "/images/svgs/general_skills.svg"
