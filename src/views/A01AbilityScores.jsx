@@ -3,7 +3,7 @@ import Button from '../components/Button/Button'
 import Container from '../components/Container/Container'
 import Distributor from '../components/Distributor/Distributor'
 import Header from '../components/Header/Header'
-import AbilityPoints from '../components/AbilityPoints/AbilityPoints'
+import PointDisplay from '../components/PointDisplay/PointDisplay'
 
 
 class AAbilityScores extends Component {
@@ -32,9 +32,6 @@ class AAbilityScores extends Component {
       <Fragment>
         <Container>
           <Header title="Ability Scores" />
-
-          <AbilityPoints 
-            score={abilities.points}/>
           
           <Distributor
             ability="Strength"
@@ -90,6 +87,11 @@ class AAbilityScores extends Component {
             className="back-button"
             onClick={this.handleBackNavigation}
             text="BACK" />
+
+          <PointDisplay 
+          className="a01-score"
+            score={abilities.points}/>
+
           <Button 
             className="next-button"
             isDisabled={abilities.points !== 0}

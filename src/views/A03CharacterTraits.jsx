@@ -5,6 +5,7 @@ import Header from '../components/Header/Header'
 import SelectBar from '../components/SelectBar/SelectBar'
 import BalanceBar from '../components/BalanceBar/BalanceBar'
 import TraitSheet from '../components/TraitSheet/TraitSheet'
+import PointDisplay from '../components/PointDisplay/PointDisplay'
 import {convertObjectToArray} from '../lib/utility'
 
 class ACharacterTraits extends Component {
@@ -33,6 +34,8 @@ class ACharacterTraits extends Component {
     const negativeTraitNodes = []
     const categories = convertObjectToArray (traits.categories)
     let total = 0
+    let totalNegative = 0
+    let totalPositive = 0
   
     for (const category of categories) {
       const keys = Object.keys(category)
@@ -46,8 +49,10 @@ class ACharacterTraits extends Component {
         if (t.selected > 0) {
           if (t.selected === 1){
             total = total + t.lesser
+            totalPositive = totalPositive + t.lesser
           } else if (t.selected === 2)  {
             total = total + t.greater
+            totalPositive = totalPositive + t.greater
           }
           positiveTraitNodes.push(
             <div className='trait-sheet__positive'>
@@ -57,8 +62,10 @@ class ACharacterTraits extends Component {
         } else if (t.selected < 0) {
           if (t.selected === -1){
             total = total - t.lesser
+            totalNegative = totalNegative - t.lesser
           } else if (t.selected === -2)  {
             total = total - t.greater
+            totalNegative = totalNegative - t.greater
           }
           negativeTraitNodes.push(
             <div className='trait-sheet__negative'>
@@ -69,7 +76,7 @@ class ACharacterTraits extends Component {
       }
     }
 
-    return {negativeTraitNodes, positiveTraitNodes, total}
+    return {negativeTraitNodes, positiveTraitNodes, total, totalNegative, totalPositive}
   }
 
   render() {
@@ -144,7 +151,7 @@ class ACharacterTraits extends Component {
       }
     ];
 
-    const {negativeTraitNodes, positiveTraitNodes, total} = this.createTraitSheetNodes()
+    const {negativeTraitNodes, positiveTraitNodes, total, totalNegative, totalPositive} = this.createTraitSheetNodes()
 
     return (
       <Fragment>
@@ -177,7 +184,15 @@ class ACharacterTraits extends Component {
             onClick={this.handleBackNavigation}
             text="BACK" />
 
-          {total}
+          <PointDisplay 
+            className="a03-negative-score"
+            score={totalNegative}/>
+          <PointDisplay 
+            className="a03-total-score"
+            score={total}/>
+          <PointDisplay 
+            className="a03-positive-score"
+            score={totalPositive}/>
 
           <Button 
             className="next-button"
