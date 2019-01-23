@@ -1,0 +1,62 @@
+DCC
+
+Diabolic-Concept-Creator
+
+	A web-based, mobile friendly tool that allows you to create characters, items, spells, abilities, and much more for the Diabolic Table-Top Role-Playing Game.
+
+Level 1 Tasks:
+
+	»Splash screen to select version«
+		Only Precursor currently
+
+
+	»Simple Character Creator«
+		Point distributed Ability Scores
+			+/- buttons
+			Also preset & randomize?
+		Personality
+		Character Traits
+			Trait points with rules
+			Placeholder Traits?
+		Profession
+		Race
+		Profession & General Skills!
+			optional for now?
+			Can be visually interesting
+		Starting Equipment
+			default items based on Profession
+			Kit items & Store items
+		Lastly... Name
+		Save/Export
+
+		
+	»Simple Spell Creator«
+		Name of Spell
+		Level
+		School of Magic
+		Effects - Multiple allowed, even of same
+			Damage
+			Ailment
+			Benefit
+			Unique
+			Other
+		Range
+		Area of Effect
+		Number of Targets
+			Method - Multiple allowed
+				#Multi-Choice(0º - 360º)
+				#Chain-effect	
+		Save/Export
+
+
+	»Simple Item Creator«
+		Name of Item
+		Category
+			Weapon
+			Armour & Apparel
+			Accessories
+			Tools
+			Vehicles
+			Ammunition
+			Other
+		Save/Export
