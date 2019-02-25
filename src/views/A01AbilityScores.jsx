@@ -8,18 +8,12 @@ import PointDisplay from '../components/PointDisplay/PointDisplay'
 
 class AAbilityScores extends Component {
 
-  constructor(props) {
-    super(props)
 
-    this.handleNavigation = this.handleNavigation.bind(this)
-    this.handleBackNavigation = this.handleBackNavigation.bind(this)
-  }
-
-  handleNavigation() {
+  handleNavigation = () => {
     const {navigateToPage} = this.props
     navigateToPage ('APersonality')
   }
-  handleBackNavigation() {
+  handleBackNavigation = () => {
     const {navigateToPage} = this.props
     navigateToPage ('ACharacterCreateMenu')
   }
@@ -94,7 +88,7 @@ class AAbilityScores extends Component {
 
           <Button 
             className="next-button"
-            isDisabled={abilities.points !== 0}
+            // isDisabled={abilities.points !== 0}
             onClick={this.handleNavigation}
             text="NEXT" />
 

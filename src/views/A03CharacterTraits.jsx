@@ -10,25 +10,18 @@ import {convertObjectToArray} from '../lib/utility'
 
 class ACharacterTraits extends Component {
 
-  constructor(props) {
-    super(props)
 
-    this.handleNavigation = this.handleNavigation.bind(this)
-    this.handleBackNavigation = this.handleBackNavigation.bind(this)
-    this.createTraitSheetNodes = this.createTraitSheetNodes.bind(this)
-  }
-
-  handleNavigation() {
+  handleNavigation = () => {
     const {navigateToPage} = this.props
-    navigateToPage ('AProfession')
+    navigateToPage ('AClass')
   }
 
-  handleBackNavigation() {
+  handleBackNavigation = () => {
     const {navigateToPage} = this.props
     navigateToPage ('APersonality')
   }
 
-  createTraitSheetNodes() {
+  createTraitSheetNodes = () => {
     const {traits} = this.props
     const positiveTraitNodes = []
     const negativeTraitNodes = []

@@ -1,0 +1,41 @@
+.class-flex {
+    display: flex
+}
+
+.PCClass-text {
+    flex: 1 1 auto;
+    height: 214px;
+    padding: 4px;
+    margin: 4px;
+    border: 2px black solid;
+    border-radius: 10px;
+
+    h3 {
+        padding: 2px;
+        margin: 2px;
+    }
+    
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.PCClass-detail {
+    flex: 0 0 200px;
+    height: 214px;
+    padding: 4px;
+    margin: 4px;
+    border: 2px black solid;
+    border-radius: 10px;
+
+    h3 {
+        padding: 2px;
+        margin: 2px;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}

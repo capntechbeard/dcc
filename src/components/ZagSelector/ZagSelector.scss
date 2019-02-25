@@ -1,0 +1,12 @@
+.zag__button {
+
+    img {
+        height: 42px;
+        width: 42px;
+    }
+    
+    &.is-odd {
+        margin: -20px 0 -20px 80px;
+    }
+
+}

@@ -6,18 +6,12 @@ import SelectBar from '../components/SelectBar/SelectBar'
 
 class APersonality extends Component {
 
-  constructor(props) {
-    super(props)
 
-    this.handleNavigation = this.handleNavigation.bind(this)
-    this.handleBackNavigation = this.handleBackNavigation.bind(this)
-  }
-
-  handleNavigation() {
+  handleNavigation = () => {
     const {navigateToPage} = this.props
     navigateToPage ('ACharacterTraits')
   }
-  handleBackNavigation() {
+  handleBackNavigation = () => {
     const {navigateToPage} = this.props
     navigateToPage ('AAbilityScores')
   }

@@ -5,7 +5,7 @@ import ACharacterCreateMenu from './views/A00CharacterCreateMenu'
 import AAbilityScores from './views/A01AbilityScores'
 import APersonality from './views/A02Personality'
 import ACharacterTraits from './views/A03CharacterTraits'
-import AProfession from './views/A04Profession'
+import AClass from './views/A04Class'
 import ARace from './views/A05Race'
 import ASkills from './views/A06Skills'
 import AShop from './views/A07Shop'
@@ -51,18 +51,15 @@ class App extends Component {
       },
       traits,
       currentPage: 'Splash',
-      personality: 3
+      personality: 3,
+      pCClass: 1,
+      racesSelected: []
     }
 
-    this.navigateToPage = this.navigateToPage.bind(this)
-    this.handleAbilityIncrement = this.handleAbilityIncrement.bind(this)
-    this.handleAbilityDecrement = this.handleAbilityDecrement.bind(this)
-    this.handlePersonalityChange = this.handlePersonalityChange.bind(this)
-    this.handleSelectedTraitCategoryChange = this.handleSelectedTraitCategoryChange.bind(this)
-    this.handleTraitSelection = this.handleTraitSelection.bind(this)
+
   }
 
-  navigateToPage(page) {
+  navigateToPage = (page) => {
     this.setState (
       {
         currentPage: page
@@ -70,7 +67,7 @@ class App extends Component {
     )
   }
 
-  calcAbilityPoints(current, isInc) {
+  calcAbilityPoints = (current, isInc) => {
     // Increment
     if(current < 3 && isInc) {
       return 1;
@@ -108,7 +105,7 @@ class App extends Component {
     }
   }
 
-  handleAbilityChange(event, isInc) {
+  handleAbilityChange = (event, isInc)  => {
     const {className} = event.currentTarget;
     const { abilities } = this.state;
     let { points, str, end, agi, kno, wis, cha } = abilities
@@ -207,19 +204,23 @@ class App extends Component {
     )
   }
 
-  handleAbilityIncrement(event) {
+  handleAbilityIncrement = (event) => {
     this.handleAbilityChange(event, true);
   }
 
-  handleAbilityDecrement(event) {
+  handleAbilityDecrement = (event) => {
     this.handleAbilityChange(event, false);
   }
 
-  handlePersonalityChange(personality) {
+  handlePersonalityChange = (personality) => {
     this.setState ({ personality });
   }
 
-  handleSelectedTraitCategoryChange(category) {
+  handlePCClassChange = (pCClass) => {
+    this.setState({ pCClass });
+  }
+
+  handleSelectedTraitCategoryChange = (category) => {
     this.setState ({ 
       traits: { 
         ...this.state.traits,
@@ -228,7 +229,7 @@ class App extends Component {
     });
   }
 
-  handleTraitSelection(traitKey, traitValue) {
+  handleTraitSelection = (traitKey, traitValue) => {
     const { traits } = this.state
     const { categories } = traits
     const newState = {
@@ -246,12 +247,24 @@ class App extends Component {
         }
       }
     }
-    console.log(newState)
     this.setState (newState)
   }
 
+  handleToggleRace = (raceKey) => {
+    let {racesSelected} = this.state
+    let tempRaces = racesSelected
+    if (racesSelected.includes(raceKey)) {
+      tempRaces = tempRaces.filter(race => race !== raceKey) 
+    } else {
+      tempRaces.push(raceKey)
+    }
+    if (tempRaces.length > 5) {
+      alert('Maximum of 5 races selected.')
+    }
+  }
+
   render() {
-    const {abilities, currentPage, personality, traits} = this.state
+    const {abilities, currentPage, pCClass, personality, racesSelected, traits} = this.state
     return (
       <div className="App">
         {
@@ -293,15 +306,19 @@ class App extends Component {
             />
         }
         {
-          currentPage === 'AProfession' &&
-            <AProfession
+          currentPage === 'AClass' &&
+            <AClass
               navigateToPage={this.navigateToPage}
+              handlePCClassChange={this.handlePCClassChange}
+              pCClass={pCClass}
             />
         }
         {
           currentPage === 'ARace' &&
             <ARace
               navigateToPage={this.navigateToPage}
+              handleToggleRace={this.handleToggleRace}
+              racesSelected={racesSelected}
             />
         }
         {

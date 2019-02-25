@@ -5,18 +5,12 @@ import Header from '../components/Header/Header'
 
 class ACharacterCreateMenu extends Component {
 
-  constructor(props) {
-    super(props)
 
-    this.handleNavigation = this.handleNavigation.bind(this)
-    this.handleBackNavigation = this.handleBackNavigation.bind(this)
-  }
-
-  handleNavigation() {
+  handleNavigation = () => {
     const {navigateToPage} = this.props
     navigateToPage ('AAbilityScores')
   }
-  handleBackNavigation() {
+  handleBackNavigation = () => {
     const {navigateToPage} = this.props
     navigateToPage ('Splash')
   }
