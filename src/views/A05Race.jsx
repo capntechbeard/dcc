@@ -71,7 +71,7 @@ class ARace extends Component {
           }
       },
       {
-        race: "Orge",
+        race: "Ogre",
         description: "PLACEHOLDER",
         imagePath: "/images/svgs/warrior.svg",
         imagePathActive: "/images/svgs/warrior_active.svg",

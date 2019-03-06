@@ -252,17 +252,24 @@ class App extends Component {
 
   handleToggleRace = (raceKey) => {
     let {racesSelected} = this.state
-    let tempRaces = racesSelected
     if (racesSelected.includes(raceKey)) {
-      tempRaces = tempRaces.filter(race => race !== raceKey) 
+      this.setState(prevState => {
+        const tempRaces = prevState.racesSelected.filter(race => race !== raceKey)
+        return {racesSelected:tempRaces}
+      })
     } else {
-      tempRaces.push(raceKey)
-    }
-    if (tempRaces.length > 5) {
-      alert('Maximum of 5 races selected.')
+      if (racesSelected.length >= 5) {
+        alert('Maximum of 5 races selected.')
+        return
+      }
+      this.setState(prevState => ({
+        racesSelected: [...prevState.racesSelected, raceKey]
+      }))
     }
   }
 
+
+  
   render() {
     const {abilities, currentPage, pCClass, personality, racesSelected, traits} = this.state
     return (
