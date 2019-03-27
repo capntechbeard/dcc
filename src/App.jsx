@@ -53,7 +53,8 @@ class App extends Component {
       currentPage: 'Splash',
       personality: 3,
       pCClass: 1,
-      racesSelected: []
+      racesSelected: [],
+      raceHighlighted: 0,
     }
 
 
@@ -255,7 +256,10 @@ class App extends Component {
     if (racesSelected.includes(raceKey)) {
       this.setState(prevState => {
         const tempRaces = prevState.racesSelected.filter(race => race !== raceKey)
-        return {racesSelected:tempRaces}
+        return {
+          raceHighlighted:raceKey,
+          racesSelected:tempRaces
+        }
       })
     } else {
       if (racesSelected.length >= 5) {
@@ -263,6 +267,7 @@ class App extends Component {
         return
       }
       this.setState(prevState => ({
+        raceHighlighted:raceKey,
         racesSelected: [...prevState.racesSelected, raceKey]
       }))
     }
@@ -271,7 +276,7 @@ class App extends Component {
 
   
   render() {
-    const {abilities, currentPage, pCClass, personality, racesSelected, traits} = this.state
+    const {abilities, currentPage, pCClass, personality,raceHighlighted, racesSelected, traits} = this.state
     return (
       <div className="App">
         {
@@ -326,6 +331,7 @@ class App extends Component {
               navigateToPage={this.navigateToPage}
               handleToggleRace={this.handleToggleRace}
               racesSelected={racesSelected}
+              raceHighlighted={raceHighlighted}
             />
         }
         {

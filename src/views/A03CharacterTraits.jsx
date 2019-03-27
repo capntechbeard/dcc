@@ -169,6 +169,16 @@ class ACharacterTraits extends Component {
                 positiveTraitNodes={positiveTraitNodes} />
             </div>
           </div>
+          <PointDisplay 
+              className="a03-negative-score"
+              score={totalNegative}/>
+            <PointDisplay 
+              className="a03-total-score"
+              score={total}/>
+            <PointDisplay 
+              className="a03-positive-score"
+              score={totalPositive}/>
+          
 
 
 
@@ -177,15 +187,7 @@ class ACharacterTraits extends Component {
             onClick={this.handleBackNavigation}
             text="BACK" />
 
-          <PointDisplay 
-            className="a03-negative-score"
-            score={totalNegative}/>
-          <PointDisplay 
-            className="a03-total-score"
-            score={total}/>
-          <PointDisplay 
-            className="a03-positive-score"
-            score={totalPositive}/>
+          
 
           <Button 
             className="next-button"
