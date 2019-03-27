@@ -22,7 +22,7 @@ class ARace extends Component {
     const races = [
       {
         race: "Amal",
-        description: "Amalgamates are the result of life in a melting pot over the course of a few millennia. By technicality, amalgamates are not a race of their own. Instead, they contain the DNA of many multiple races which has been deluted to the point that no specific origin can be traced. Still, one can be 'half Amal' should one of their parents be of a traditional race. Amals have no specific home to call their own, but now dominate the highest majority of races on the planet. This has allowed amals to hold most conventional powers and kingdoms of the lands.",
+        description: "Amalgamates are the result of life in a melting pot over the course of a few millennia. By technicality, amalgamates are not a race of their own. Instead, they contain the DNA of many multiple races which has been deluted to the point that no specific origin can be traced. Still, one can be 'half Amal' should one of their parents be of a traditional race. Amals have no specific home to call their own, but now dominate the highest majority of races on the planet. This has allowed amals to hold most powers and kingdoms of the lands.",
         lifespan: "Amals have a shorter lifespan than traditional races, living to only about 100 years.",
         imagePath: "/images/svgs/general_skills.svg",
         imagePathActive: "/images/svgs/general_skills_active.svg",

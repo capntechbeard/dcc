@@ -150,7 +150,7 @@ class ACharacterTraits extends Component {
       <Fragment>
         <Container>
           <Header title="Character Traits" />
-
+          <div className="text-align-center">
           <div className='traits-wrapper'>
             <div className='traits-wrapper__left'>
               <div className='traits-wrapper-left__top'>
@@ -194,6 +194,7 @@ class ACharacterTraits extends Component {
             isDisabled={total !== 0}
             onClick={this.handleNavigation}
             text="NEXT" />
+            </div>
         </Container>
       </Fragment>
         

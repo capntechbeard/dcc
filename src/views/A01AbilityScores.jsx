@@ -24,6 +24,7 @@ class AAbilityScores extends Component {
 
     return (
       <Fragment>
+        <div className="text-align-center">
         <Container>
           <Header title="Ability Scores" />
           
@@ -95,6 +96,7 @@ class AAbilityScores extends Component {
 
 
         </Container>
+        </div>
       </Fragment>
         
     );
