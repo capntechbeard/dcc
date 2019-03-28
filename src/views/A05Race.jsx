@@ -24,8 +24,8 @@ class ARace extends Component {
         race: "Amal",
         description: "Amalgamates are the result of life in a melting pot over the course of a few millennia. By technicality, amalgamates are not a race of their own. Instead, they contain the DNA of many multiple races which has been deluted to the point that no specific origin can be traced. Still, one can be 'half Amal' should one of their parents be of a traditional race. Amals have no specific home to call their own, but now dominate the highest majority of races on the planet. This has allowed amals to hold most powers and kingdoms of the lands.",
         lifespan: "Amals have a shorter lifespan than traditional races, living to only about 100 years.",
-        imagePath: "/images/svgs/general_skills.svg",
-        imagePathActive: "/images/svgs/general_skills_active.svg",
+        imagePath: "/images/svgs/race_amal.svg",
+        imagePathActive: "/images/svgs/race_amal_active.svg",
         active: racesSelected.includes(0),
         onClick: () => {
           handleToggleRace(0);
@@ -35,8 +35,8 @@ class ARace extends Component {
         race: "Elf",
         description: "Elves are reclusive by nature, often preferring to live in small woodland communities where they can worship and protect the powers of nature. Elves feel most at home surrounded by greenery and fresh, lively air. Elves are widely believed to be the most populous traditional race, however this assumes the majority of elven societies are hidden. Even most elven clans are unaware of each other.",
         lifespan: "Elves boast the longest natural lifespan of the traditional races. The average elf lives nearly 300 years.",
-        imagePath: "/images/svgs/spiritualist.svg",
-        imagePathActive: "/images/svgs/spiritualist_active.svg",
+        imagePath: "/images/svgs/race_elf.svg",
+        imagePathActive: "/images/svgs/race_elf_active.svg",
         active: racesSelected.includes(1),
         onClick: () => {
           handleToggleRace(1);
@@ -46,8 +46,8 @@ class ARace extends Component {
         race: "Dwarf",
         description: "Dwarves are often very family oriented, taking great pride in supporting their immediate and extended relatives. Most dwarves regard other dwarven clans with respect and reverance, despite their often competative nature. Dwarven strongholds are few and far between, however they are undenible marvels of engineering and masonry. Many dwarves take to a life of adventure in the hopes of strengthening the reputation of their clan, and for personal bragging rights.",
         lifespan: "Dwarves live for approximently 220 years, however it is quite rare that a dwarf would die of old age. Most dwarves prefer to die in battle, or on grand adventures.",
-        imagePath: "/images/svgs/warrior.svg",
-        imagePathActive: "/images/svgs/warrior_active.svg",
+        imagePath: "/images/svgs/race_dwarf.svg",
+        imagePathActive: "/images/svgs/race_dwarf_active.svg",
         active: racesSelected.includes(2),
         onClick: () => {
           handleToggleRace(2);
@@ -68,8 +68,8 @@ class ARace extends Component {
         race: "Orc",
         description: "Orcs orcs orcs orcs orcs.",
         lifespan: "Orcs can live for about 140 years. However, their often reckless and violent nature set the average lifespan at about 70 years of age.",
-        imagePath: "/images/svgs/warrior.svg",
-        imagePathActive: "/images/svgs/warrior_active.svg",
+        imagePath: "/images/svgs/race_orc.svg",
+        imagePathActive: "/images/svgs/race_orc_active.svg",
         active: racesSelected.includes(4),
         onClick: () => {
           handleToggleRace(4);
@@ -79,8 +79,8 @@ class ARace extends Component {
         race: "Ogre",
         description: "Ogres ogres ogres ogres ogres.",
         lifespan: "Ogres live to be about 160. While often associated with orcish culture, most Ogres live out the majority of their natural lifespan due to their hardy, yet fearful nature.",
-        imagePath: "/images/svgs/warrior.svg",
-        imagePathActive: "/images/svgs/warrior_active.svg",
+        imagePath: "/images/svgs/race_ogre.svg",
+        imagePathActive: "/images/svgs/race_ogre_active.svg",
         active: racesSelected.includes(5),
         onClick: () => {
           handleToggleRace(5);
