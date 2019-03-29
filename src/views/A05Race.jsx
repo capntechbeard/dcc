@@ -57,8 +57,8 @@ class ARace extends Component {
         race: "Gnome",
         description: "Gnomes gnomes gnomes gnomes gnomes.",
         lifespan: "Gnomes live to be upwards of 260 years of age, often devoting their venerable years to research, and hobbies.",
-        imagePath: "/images/svgs/arcanist.svg",
-        imagePathActive: "/images/svgs/arcanist_active.svg",
+        imagePath: "/images/svgs/race_gnome.svg",
+        imagePathActive: "/images/svgs/race_gnome_active.svg",
         active: racesSelected.includes(3),
         onClick: () => {
           handleToggleRace(3);
