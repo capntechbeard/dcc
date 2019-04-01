@@ -22,7 +22,7 @@ class ARace extends Component {
     const races = [
       {
         race: "Amal",
-        description: "Amalgamates are the result of life in a melting pot over the course of a few millennia. By technicality, amalgamates are not a race of their own. Instead, they contain the DNA of many multiple races which has been deluted to the point that no specific origin can be traced. Still, one can be 'half Amal' should one of their parents be of a traditional race. Amals have no specific home to call their own, but now dominate the highest majority of races on the planet. This has allowed amals to hold most powers and kingdoms of the lands.",
+        description: "Amalgamates are the result of life in a melting pot over the course of a few millennia. By technicality, amalgamates are not a race of their own. Instead, they contain the DNA of many multiple races which has been diluted to the point that no specific origin can be traced. Still, one can be 'half Amal' should one of their parents be of a traditional race. Amals have no specific home to call their own, but now dominate the highest majority of races on the planet. This has allowed amals to hold most powers and kingdoms of the lands.",
         lifespan: "Amals have a shorter lifespan than traditional races, living to only about 100 years.",
         imagePath: "/images/svgs/race_amal.svg",
         imagePathActive: "/images/svgs/race_amal_active.svg",
@@ -44,7 +44,7 @@ class ARace extends Component {
       },
       {
         race: "Dwarf",
-        description: "Dwarves are often very family oriented, taking great pride in supporting their immediate and extended relatives. Most dwarves regard other dwarven clans with respect and reverance, despite their often competative nature. Dwarven strongholds are few and far between, however they are undenible marvels of engineering and masonry. Many dwarves take to a life of adventure in the hopes of strengthening the reputation of their clan, and for personal bragging rights.",
+        description: "Dwarves are often very family oriented, taking great pride in supporting their immediate and extended relatives. Most dwarves regard other dwarven clans with respect and reverence, despite their often competitive nature. Dwarven strongholds are few and far between, however they are undeniable marvels of engineering and masonry. Many dwarves take to a life of adventure in the hopes of strengthening the reputation of their clan, and for personal bragging rights.",
         lifespan: "Dwarves live for approximently 220 years, however it is quite rare that a dwarf would die of old age. Most dwarves prefer to die in battle, or on grand adventures.",
         imagePath: "/images/svgs/race_dwarf.svg",
         imagePathActive: "/images/svgs/race_dwarf_active.svg",
